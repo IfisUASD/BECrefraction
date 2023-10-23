@@ -16,7 +16,13 @@ Nt = int(T / dt)  # Number of time steps
 φ = np.zeros(N, dtype=complex)
 A = np.zeros(N)
 J = np.zeros(N)
+def A_0(x):
+     return np.cos(x)
 
+i = 0
+while i < len(x):
+     A[i] = A_0(x[i])
+     i = i + 1
 # Initialize arrays to store refractive indices
 k_values = np.linspace(0.001, 1.0, 100)
 refractive_indices = np.zeros((len(k_values), Nt))
