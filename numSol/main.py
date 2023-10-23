@@ -36,11 +36,11 @@ def main():
 
     # Plot the refractive index as a function of time
     for i, k in enumerate(k_values):
-        plt.plot(np.arange(Nt)*dt, refractive_indices[i, :], label=f'k = {k:.3f}')
+        plt.scatter(k_values[i], refractive_indices[i, 0])#, label=f'k = {k:.3f}')
 
-    plt.xlabel('Time')
+    plt.xlabel('K')
     plt.ylabel('Refractive Index')
-    plt.legend()
+    #plt.legend()
     plt.show()
 
     print("hasta ahora todo jevi")
